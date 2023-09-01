@@ -26,10 +26,28 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Database Installation
+
+[Install Docker engine](https://docs.docker.com/engine/install/)
+```bash
+$ docker run -d -p 3434:3306 --name users -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=task_mgmt -e MYSQL_USER=amir -e MYSQL_PASSWORD=1234 mysql/mysql-server:latest
+
+$ docker exec -it users bash
+
+$ mysql -u root -p
+
+$ 1234
+
+mysql> CREATE USER 'root'@'172.17.0.1' IDENTIFIED BY 'password';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.17.0.1' WITH GRANT OPTION;
+```
+
 ## Installation
 
 ```bash
 $ npm install
+
+$ npm i --save @nestjs/typeorm typeorm
 ```
 
 ## Running the app
