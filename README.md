@@ -48,14 +48,6 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.17.0.1' WITH GRANT OPTION;
 $ npm install
 ```
 
-```bash
-$ npm i --save @nestjs/typeorm typeorm
-```
-
-```bash
-$ npm install mysql2 --save
-```
-
 ## Running the app
 
 ```bash
